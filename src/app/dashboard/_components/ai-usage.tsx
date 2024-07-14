@@ -32,7 +32,9 @@ export const AIUsage = async () => {
     where: { userId: userId as string },
   });
 
-  availableCredit = Number(userCredit?.totalCredit);
+  availableCredit = userCredit?.totalCredit
+    ? 10000
+    : Number(userCredit?.totalCredit);
 
   return (
     <div className="bg-white">

@@ -63,8 +63,8 @@ export async function POST(req: Request) {
       customer: stripeCustomer?.stripeCustomerId,
       line_items,
       mode: "payment",
-      success_url: `http://${process.env.VERCEL_URL}/dashboard/`,
-      cancel_url: `http://${process.env.VERCEL_URL}/`,
+      success_url: `http://magic-social.vercel.app/dashboard/`,
+      cancel_url: `http://magic-social.vercel.app/`,
       metadata: {
         userId: userId,
       },
